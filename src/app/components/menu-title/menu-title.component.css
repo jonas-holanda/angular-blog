@@ -1,0 +1,13 @@
+.container__menu-title > h1 {
+    margin: 15px 0px;
+    font-size: 8.6rem;
+    font-weight: 800;
+    text-shadow: 4px 3px 6px rgba(0,233,227,0.72);
+    display: flex;
+    justify-content: center;
+}
+
+.container__menu-title > hr {
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
