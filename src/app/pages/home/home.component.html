@@ -1,30 +1,23 @@
-<header>
-    <app-menu-bar></app-menu-bar>
-</header>
-<app-menu-title></app-menu-title>
 <div class="container__articles">
     <div class="articles__main">
         <app-big-card
-            photoCover="https://conteudo.imguol.com.br/c/entretenimento/78/2023/11/09/poster-do-anime-shangri-la-1699546911949_v2_900x506.png"
-            cardTitle="Shangri-La Frontier: anime misturando RPG online com luta é pedida perfeita"
-            cardDescription="O anime de Shangrila frontier é um nova febre em 2023 e consta com 24 episódios."
+            id="{{ bigCard[0].id }}"
+            photoCover="{{ bigCard[0].photo }}"
+            cardTitle="{{ bigCard[0].title }}"
+            cardDescription="{{ bigCard[0].description }}"
         >
         </app-big-card>
 
     </div>
-    <div class="articles__others">
-        <app-small-card
-            photoCover="https://bacananews.com.br/wp-content/uploads/2023/04/340634888_151610611180484_1694060243026630335_n-1080x560.jpg"
-            cardTitle="Lista de Melhores Animes Shonen"
-        ></app-small-card>
-        <app-small-card
-        photoCover="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2022/06/Collage-Maker-21-Jun-2022-0543-PM.jpg"
-        cardTitle="Melhores Animes Shonen da Nova Geração"
-        ></app-small-card>
-        <app-small-card
-            photoCover="https://bacananews.com.br/wp-content/uploads/2023/04/340634888_151610611180484_1694060243026630335_n-1080x560.jpg"
-            cardTitle="Lista de Melhores Animes Shonen"
-        ></app-small-card>
+    <div class="articles__others"> 
+        <div *ngFor="let sc of smallCard;">
+            <app-small-card
+                id="{{ sc.id}}"
+                photoCover="{{ sc.photo }}"
+                cardTitle="{{ sc.title }}"
+            >
+            </app-small-card>
+        </div>
         
     </div>
 </div>
